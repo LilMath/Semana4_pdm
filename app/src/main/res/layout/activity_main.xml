@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F0F0F0">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculadora do Matheus"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/etVisor"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="0"
+            android:textSize="28sp"
+            android:gravity="end|center_vertical"
+            android:inputType="none"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:enabled="false" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:shrinkColumns="*"
+                    android:paddingBottom="8dp">
+
+                    <TableRow>
+                        <Button android:text="sin" />
+                        <Button android:text="cos" />
+                        <Button android:text="tan" />
+                        <Button android:text="log" />
+                    </TableRow>
+
+                    <TableRow>
+                        <Button android:text="√" />
+                        <Button android:text="x²" />
+                        <Button android:text="1/x" />
+                        <Button android:text="π" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:shrinkColumns="*">
+
+                    <TableRow>
+                        <Button android:text="7" />
+                        <Button android:text="8" />
+                        <Button android:text="9" />
+                        <Button android:text="/" />
+                    </TableRow>
+
+                    <TableRow>
+                        <Button android:text="4" />
+                        <Button android:text="5" />
+                        <Button android:text="6" />
+                        <Button android:text="*" />
+                    </TableRow>
+
+                    <TableRow>
+                        <Button android:text="1" />
+                        <Button android:text="2" />
+                        <Button android:text="3" />
+                        <Button android:text="-" />
+                    </TableRow>
+
+                    <TableRow>
+                        <Button android:text="0" />
+                        <Button android:text="." />
+                        <Button android:text="=" />
+                        <Button android:text="+" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
